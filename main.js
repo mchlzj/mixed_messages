@@ -1,9 +1,10 @@
 
-
+/*
 const App = () => {
        const randQuote = getRandQuote();
        console.log(`"${randQuote.quote}" - ${randQuote.author}`);
 }
+*/
 
 const getRandQuote = () => {
        const randIndex = Math.floor(Math.random() * quotes.length);
@@ -221,5 +222,33 @@ const quotes = [
 Running the App
 */
 
-App();
+//App();
+getRandQuote();
+
+const quote = document.getElementById('quote');
+const author = document.getElementById('author');
+const newQuote = document.getElementById('newQuote');
+
+const randColor = ['#FF80FE','#FF8080','#9180FF','#80E1FF','#80FF94','#EAFF80','#FFD580','#FF8080'];
+const getRandColor = () => randColor[Math.floor(Math.random()*randColor.length)];
+
+let randQuote = getRandQuote();
+
+quote.innerHTML = randQuote.quote;
+author.innerHTML = randQuote.author;
+
+const newQuoteEvent = () => {
+       randQuote = getRandQuote();
+       quote.innerHTML = randQuote.quote;
+       author.innerHTML = randQuote.author;
+       document.getElementById('quoteSection').style.backgroundColor = getRandColor();
+}
+
+// newQuote.onclick = () => {
+//        newQuoteEvent();
+// }
+
+newQuote.addEventListener('click', newQuoteEvent);
+
+
 

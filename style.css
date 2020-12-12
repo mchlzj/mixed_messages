@@ -1,0 +1,50 @@
+h1,
+p {
+  font-family: "Playfair Display", serif;
+}
+
+h1 {
+  font-weight: 800;
+  margin: 4em;
+  color: #121212;
+}
+p.quote {
+  font-weight: 500;
+  padding-top: 2em;
+  color: white;
+}
+
+body {
+  text-align: center;
+  background-color: rgb(255, 255, 255);
+}
+section {
+  border-radius: 10px;
+  background-color: rgb(255, 101, 101);
+  transition: all 0.5s;
+}
+button p {
+  font-family: Arial;
+  font-weight: 900;
+}
+button {
+  border-radius: 1em;
+  border-color: black;
+  border-width: 0.3em;
+  background-color: white;
+  padding-right: 2em;
+  padding-left: 2em;
+  margin-bottom: 2em;
+}
+button:hover {
+  border-color: white;
+  background-color: black;
+  color: white;
+  transition: all 0.5s;
+}
+footer {
+  margin-top: 23em;
+}
+footer p {
+  text-align: right;
+}
